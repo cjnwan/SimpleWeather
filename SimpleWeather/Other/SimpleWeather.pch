@@ -1,0 +1,25 @@
+//
+//  SimpleWeather.pch
+//  SimpleWeather
+//
+//  Created by 陈剑南 on 12/30/15.
+//  Copyright © 2015 Jimmy Chen. All rights reserved.
+//
+
+#ifndef SimpleWeather_pch
+#define SimpleWeather_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "NJGlobalConstData.h"
+#import "UIView+Extension.h"
+#import "NSString+Extension.h"
+#import "UIButton+Extension.h"
+#import "UIColor+Extension.h"
+#import "NSDate+Extenion.h"
+#import "UIImage+Extension.h"
+#import "WeatherDataModel.h"
+#import "SWRevealViewController.h"
+
+#endif /* SimpleWeather_pch */

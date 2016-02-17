@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DEA978484ADFCBDDA342830250A410B15B179860",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AD0AE16936DA6A06E9E89740BFA444D38DA6FE08" : 0,
+    "DEA978484ADFCBDDA342830250A410B15B179860" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "333560B7-ABFF-41DA-BAD9-6C9C3231B890",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AD0AE16936DA6A06E9E89740BFA444D38DA6FE08" : "",
+    "DEA978484ADFCBDDA342830250A410B15B179860" : "SimpleWeather\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SimpleWeather",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SimpleWeather.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.com:cjnwan\/SimpleWeather.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AD0AE16936DA6A06E9E89740BFA444D38DA6FE08"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.mtsports.cn\/cjn\/SimpleWeather.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DEA978484ADFCBDDA342830250A410B15B179860"
+    }
+  ]
+}
