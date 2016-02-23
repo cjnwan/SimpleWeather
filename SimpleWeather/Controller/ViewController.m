@@ -106,6 +106,7 @@
 
 - (void)setupDataAllCity{
     [self showWaitingView];
+    __weak __typeof(&*self)weakSelf = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         HttpManager *httpManager = [HttpManager manager];
         [httpManager getWeatherDataByCityNames:self.cityArray dataHandle:^(NSArray * _Nonnull dataModels) {
@@ -117,13 +118,13 @@
                     for(int i= 0; i<dataModels.count; i++){
                         WeatherDataModel *dataModel =  dataModels[i];
                         if([cityName isEqualToString: dataModel.basic.city]){
-                            [self.dataSource addObject:dataModel];
+                            [weakSelf.dataSource addObject:dataModel];
                         }
                     }
                 }
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self.waitingAlert hideView];
-                    [self.swipView reloadData];
+                    [weakSelf.waitingAlert hideView];
+                    [weakSelf.swipView reloadData];
                 });
                 
             });
@@ -243,8 +244,6 @@
     return self.swipView.bounds.size;
 }
 
-#pragma mark - SwipeViewDelegate
-
 
 #pragma mark - WeatherOperationDeleaget
 
@@ -298,9 +297,9 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         HttpManager *httpManager = [HttpManager manager];
         [httpManager getWeatherDataByCityName:currentCityName dataHandle:^(WeatherDataModel * _Nonnull dataModel) {
-            self.dataSource[index] = dataModel;
+            weakSelf.dataSource[index] = dataModel;
             [weakSelf.swipView reloadItemAtIndex:self.swipView.currentItemIndex];
-            [self postData:dataModel];
+            [weakSelf postData:dataModel];
         }];
     });
 }
